@@ -1,4 +1,4 @@
-<center><h2>1ο ΕΠΑΛ Διονύσου-"Ζήνων"</h2><center>
+<font color="blue"><center><h2>1ο ΕΠΑΛ Διονύσου-"Ζήνων"</h2><center></font>
 
 <h2>Βασική ιδέα</h2>
 
