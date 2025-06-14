@@ -36,29 +36,41 @@
 <h2>Υλικά</h2>
 Τα υλικά που τελικά χρησιμοποιήθηκαν για την υλοποίηση των αυτοματισμών είναι τα παρακάτω:
 <table>
-<tr><td><b>Α/Α</b>b></td><td><b>Περιγραφή</b></td><td><b>Τιμή</b></td></tr>
+<tr><td><b>Α/Α</b></td><td><b>Περιγραφή</b></td><td><b>Τιμή</b></td></tr>
 <tr><td>1</td><td>Arduino Uno x 2</td><td>59.80€</td></tr>
 <tr><td>2</td><td>Breadboard</td><td>2.20€</td></tr>
 <tr><td>3</td><td>HC-SR501</td><td>2.80€</td></tr>
-<tr><td>2</td><td>KY-038</td><td>1.20€</td></tr>
-<tr><td>2</td><td>MQ2</td><td>8.60€</td></tr>
-<tr><td>2</td><td>LCD 20x4</td><td>9.90€</td></tr>
-<tr><td>2</td><td>Buzzer 5V-Passive</td><td>0.60€</td></tr>
-<tr><td>2</td><td>DFPlayer-A Mini MP3 Player</td><td>9.90€</td></tr>
-<tr><td>2</td><td>Breadboard Jumper Wires</td><td>3.60€</td></tr>
-<tr><td>2</td><td>LED Red Diffused 5mm & Resistor 200Ω</td><td>0.80€</td></tr>
-<tr><td>2</td><td>Speaker Enclosed 2W 8Ohm-20x30mm</td><td>2.40€</td></tr>
-<tr><td>2</td><td>Sandisk Ultra microSDHC 32GB</td><td>7.00€</td></tr>
+<tr><td>4</td><td>KY-038</td><td>1.20€</td></tr>
+<tr><td>5</td><td>MQ2</td><td>8.60€</td></tr>
+<tr><td>6</td><td>LCD 20x4</td><td>9.90€</td></tr>
+<tr><td>7</td><td>Buzzer 5V-Passive</td><td>0.60€</td></tr>
+<tr><td>8</td><td>DFPlayer-A Mini MP3 Player</td><td>9.90€</td></tr>
+<tr><td>9</td><td>Breadboard Jumper Wires</td><td>3.60€</td></tr>
+<tr><td>10</td><td>LED Red Diffused 5mm & Resistor 200Ω</td><td>0.80€</td></tr>
+<tr><td>11</td><td>Speaker Enclosed 2W 8Ohm-20x30mm</td><td>2.40€</td></tr>
+<tr><td>12</td><td>Sandisk Ultra microSDHC 32GB</td><td>7.00€</td></tr>
+<tr><td></td><td><b>Σύνολο</b></td><td>108.80€</td></tr> 
+</table>
+Τα υλικά για την κατασκευή της μακέτας είναι τα παρακάτω:
+<table>
+<tr><td><b>Α/Α</b></td><td><b>Περιγραφή</b></td><td><b>Τιμή</b></td></tr>
+<tr><td>1</td><td>Arduino Uno x 2</td><td>59.80€</td></tr>
+<tr><td>2</td><td>Breadboard</td><td>2.20€</td></tr>
+<tr><td>3</td><td>HC-SR501</td><td>2.80€</td></tr>
+<tr><td>4</td><td>KY-038</td><td>1.20€</td></tr>
+<tr><td>5</td><td>MQ2</td><td>8.60€</td></tr>
+<tr><td>6</td><td>LCD 20x4</td><td>9.90€</td></tr>
+<tr><td>7</td><td>Buzzer 5V-Passive</td><td>0.60€</td></tr>
+<tr><td>8</td><td>DFPlayer-A Mini MP3 Player</td><td>9.90€</td></tr>
+<tr><td>9</td><td>Breadboard Jumper Wires</td><td>3.60€</td></tr>
+<tr><td>10</td><td>LED Red Diffused 5mm & Resistor 200Ω</td><td>0.80€</td></tr>
+<tr><td>11</td><td>Speaker Enclosed 2W 8Ohm-20x30mm</td><td>2.40€</td></tr>
+<tr><td>12</td><td>Sandisk Ultra microSDHC 32GB</td><td>7.00€</td></tr>
+<tr><td></td><td><b>Σύνολο</b></td><td>108.80€</td></tr> 
 </table>
 
 
 
-
- 
-Οθόνη  
-Buzzer
-Ηχεία
-Led, καλώδια, αντιστάσεις
 
 
 
