@@ -1,0 +1,51 @@
+#include <SoftwareSerial.h>
+#include <DFRobotDFPlayerMini.h>
+
+const int pirPin = 4;      // PIR motion sensor pin
+const int micPin = A0;     // KY-038 microphone analog pin
+const int micThreshold = 650; // Adjust based on testing
+
+SoftwareSerial mySerial(2, 3); // RX, TX to DFPlayer Mini
+DFRobotDFPlayerMini myDFPlayer;
+
+unsigned long lastMotionTime = 0;
+unsigned long lastSoundTime = 0;
+
+const unsigned long pirDelay = 18000;    // 18 seconds delay after PIR triggers
+const unsigned long soundCooldown = 5000; // 5 seconds cooldown for mic
+
+void setup() {
+  pinMode(pirPin, INPUT);
+  Serial.begin(9600);
+  mySerial.begin(9600);
+
+  if (!myDFPlayer.begin(mySerial)) {
+    Serial.println("DFPlayer Mini not detected.");
+    while (true); // Stop here if DFPlayer fails to initialize
+  }
+
+  myDFPlayer.volume(30); // Set volume (0–30)
+  Serial.println("System ready.");
+}
+
+void loop() {
+  unsigned long now = millis();
+
+  // PIR motion detection with 18s cooldown
+  if (digitalRead(pirPin) == HIGH && (now - lastMotionTime > pirDelay)) {
+    Serial.println("Motion detected! Playing 0001.mp3");
+    myDFPlayer.play(1); // Play 0001.mp3
+    lastMotionTime = now;
+  }
+
+  // Microphone sound detection with 3s cooldown
+  int micValue = analogRead(micPin);
+  if (micValue > micThreshold && (now - lastSoundTime > soundCooldown)) {
+    Serial.print("Sound detected (value: ");
+    Serial.print(micValue);
+    Serial.println("). Playing 0002.mp3");
+    myDFPlayer.play(2); // Play 0002.mp3
+    lastSoundTime = now;
+
+  }
+}  
