@@ -1,0 +1,65 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+#define MQ2_A0 A0
+#define BUZZER_PIN 8
+#define LED_PIN 7  // Add LED on digital pin 7
+
+LiquidCrystal_I2C lcd(0x27, 20, 4); // 20x4 LCD
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+  pinMode(BUZZER_PIN, OUTPUT);
+  pinMode(LED_PIN, OUTPUT);         // Set LED pin as output
+
+  lcd.setCursor(0, 0);
+  lcd.print(" MQ2 Sensor Monitor ");
+  delay(2000);
+}
+
+void loop() {
+  int sensorValue = analogRead(MQ2_A0);
+  float voltage = sensorValue * (5.0 / 1023.0);
+
+  lcd.clear();
+
+  if (sensorValue >= 600) {
+    // High smoke intensity alert
+    lcd.setCursor(0, 0);
+    lcd.print("HIGH SMOKE INTENSITY");
+    lcd.setCursor(0, 1);
+    lcd.print("BE AWARE");
+
+    tone(BUZZER_PIN, 1000); // Start buzzer
+    digitalWrite(LED_PIN, HIGH); // Turn on LED
+    delay(2000);
+    noTone(BUZZER_PIN); // Stop buzzer
+  } else {
+    // Normal readings
+    lcd.setCursor(0, 0);
+    lcd.print("Analog: ");
+    lcd.print(sensorValue);
+
+    lcd.setCursor(0, 1);
+    lcd.print("Voltage: ");
+    lcd.print(voltage, 2);
+    lcd.print(" V");
+
+    lcd.setCursor(0, 2);
+    lcd.print("Gas Level: ");
+    if (sensorValue < 300) {
+      lcd.print("Clean");
+    } else {
+      lcd.print("Moderate");
+    }
+
+    lcd.setCursor(0, 3);
+    lcd.print("Monitoring...");
+
+    noTone(BUZZER_PIN);            // Ensure buzzer is off
+    digitalWrite(LED_PIN, LOW);    // Turn off LED
+  }
+
+  delay(1000); // Update every second
+} 
